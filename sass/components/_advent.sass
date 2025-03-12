@@ -1,0 +1,17 @@
+@use '../abstracts/_mixins' as mixins
+
+.advent
+    height: 100vh
+    display: grid
+    grid-template-columns: repeat(5,1fr)
+    grid-template-rows: auto
+    gap: 1rem
+
+    &__box
+        @include mixins.flex-center()
+        @for $i from 1 through 24
+            &:nth-child(#{$i})
+                background-image: url("../images/image-#{$i}.svg")
+                background-repeat: no-repeat
+                background-position: center
+                background-size: contain
