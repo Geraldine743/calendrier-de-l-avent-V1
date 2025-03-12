@@ -61,6 +61,13 @@ button {
   appearance: none;
 }
 
+@font-face {
+  font-family: "Nabla";
+  src: url("../fonts/Nabla-Regular.woff2") format("woff2"), url("../fonts/Nabla-Regular.woff") format("woff"), url("../fonts/Nabla-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 .calendar {
   background-color: #0a4a48;
 }
@@ -220,4 +227,17 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+.advent__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50% 50% 0 0;
+  background-image: url("../images/fond-paquet.jpg");
+  background-size: cover;
+  font-family: "Nabla", serif;
+  font-size: 3rem;
+  color: #c44f40;
 }/*# sourceMappingURL=main.css.map */
