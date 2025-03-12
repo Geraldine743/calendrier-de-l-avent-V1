@@ -240,4 +240,8 @@ button {
   font-family: "Nabla", serif;
   font-size: 3rem;
   color: #c44f40;
+  transition: opacity 0.5s ease-in;
+}
+.advent__number.hide {
+  opacity: 0;
 }/*# sourceMappingURL=main.css.map */
