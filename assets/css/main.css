@@ -61,6 +61,10 @@ button {
   appearance: none;
 }
 
+dialog {
+  border-width: 0;
+}
+
 @font-face {
   font-family: "Nabla";
   src: url("../fonts/Nabla-Regular.woff2") format("woff2"), url("../fonts/Nabla-Regular.woff") format("woff"), url("../fonts/Nabla-Regular.ttf") format("truetype");
@@ -244,4 +248,37 @@ button {
 }
 .advent__number.hide {
   opacity: 0;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.modal[open] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal__container {
+  background-color: white;
+  border-radius: 2rem;
+  width: 50%;
+  padding: 2rem 4rem;
+  position: relative;
+}
+.modal__close {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: 0;
+  right: 0;
+}
+.modal__close svg {
+  width: 2rem;
+  height: 2rem;
+  fill: #c44f40;
 }/*# sourceMappingURL=main.css.map */
