@@ -1,3 +1,5 @@
+import quotes from './quotes.js'
+
 class Animation {
     constructor () {
         this.boxes=document.querySelectorAll(".js-box")
@@ -5,11 +7,16 @@ class Animation {
         this.dateNumber= this.today.getDate ()
         this.url= 'assets/audios/opening-song.mp3'
         this.song= new Audio (this.url)
+        this.modal= document.querySelector ('.js-modal')
+        this.quote=this.modal.querySelector ('.js-quote')
+        this.author=this.modal.querySelector ('.js-author')
+
         this.init ()
     }
 
     init (){
         this.triggerAnimation ()
+        this.closeModal ()
     }
 
     triggerAnimation () {
@@ -19,6 +26,7 @@ class Animation {
                 if (this.boxNumber<= this.dateNumber){
                     this.playSong ()
                     this.showImage(box)
+                    this.openModal (this.boxNumber)
                 }
             })
         })
@@ -32,6 +40,18 @@ class Animation {
 
     showImage (boxToHide){
         boxToHide.classList.add('hide')
+    }
+
+    openModal (index) {
+        this.modal.showModal ()
+        this.quote.textContent= quotes[index].quote
+        this.author.textContent= quotes[index].author
+    }
+
+    closeModal() {
+        this.modal.addEventListener ('close', ()=>{
+            this.song.pause ()
+        })
     }
 }
 

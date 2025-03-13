@@ -232,6 +232,12 @@ dialog {
   background-position: center;
   background-size: contain;
 }
+.advent__box:nth-child(25) {
+  background-image: url("../images/image-25.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
 .advent__number {
   display: flex;
   justify-content: center;
