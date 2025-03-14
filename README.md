@@ -10,3 +10,4 @@ HTML,CSS,SASS,JAVASCRIPT
     -- Si ce n'est pas le cas, rien ne se passe.
     -- Si c'est le cas, on joue de la musique ,on affiche l'image de fond de la case et on affiche une popup avec une citation.
     -- Quand on ferme la popup, la musique s'arrête.
+-- Sauvegarder un historique des cases déjà ouvertes dans le navigateur.

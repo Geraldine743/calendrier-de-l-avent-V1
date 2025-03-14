@@ -1,4 +1,5 @@
 import quotes from './quotes.js'
+import { History } from './History.js'
 
 class Animation {
     constructor () {
@@ -17,16 +18,18 @@ class Animation {
     init (){
         this.triggerAnimation ()
         this.closeModal ()
+        
     }
 
     triggerAnimation () {
         this.boxes.forEach (box =>{
             box.addEventListener ('click', ()=>{
-                this.boxNumber= parseInt(box.textContent)
-                if (this.boxNumber<= this.dateNumber){
+                window.app.boxNumber= parseInt(box.textContent)
+                if (window.app.boxNumber<= this.dateNumber){
                     this.playSong ()
                     this.showImage(box)
-                    this.openModal (this.boxNumber)
+                    this.openModal (window.app.boxNumber)
+                    new History
                 }
             })
         })
