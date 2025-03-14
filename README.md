@@ -11,3 +11,7 @@ HTML,CSS,SASS,JAVASCRIPT
     -- Si c'est le cas, on joue de la musique ,on affiche l'image de fond de la case et on affiche une popup avec une citation.
     -- Quand on ferme la popup, la musique s'arrête.
 -- Sauvegarder un historique des cases déjà ouvertes dans le navigateur.
+
+## Pistes d'amelioration:
+-- Si une case est déjà ouverte, on ne peut pas recliquer dessus pour jouer de la musique et afficher la citation.
+-- Rendre l'application responsive.
