@@ -22,7 +22,7 @@ class Animation {
     triggerAnimation () {
         this.boxes.forEach (box =>{
             box.addEventListener ('click', ()=>{
-                this.boxNumber = parseInt(box.textContent)
+                this.boxNumber= parseInt(box.textContent)
                 if (this.boxNumber<= this.dateNumber){
                     this.playSong ()
                     this.showImage(box)
