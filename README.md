@@ -15,3 +15,5 @@ HTML,CSS,SASS,JAVASCRIPT
 ## Pistes d'amelioration:
 -- Si une case est déjà ouverte, on ne peut pas recliquer dessus pour jouer de la musique et afficher la citation.
 -- Rendre l'application responsive.
+
+## Projet basé sur un TP de Charline Laporte 
