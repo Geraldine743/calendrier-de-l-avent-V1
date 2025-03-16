@@ -1,21 +1,31 @@
 class History {
     constructor () {
+        this.boxes=document.querySelectorAll(".js-box")
+        this.today=new Date(Date.now())
+        this.dateNumber= this.today.getDate ()
         this.openedBoxes = []
         this.init ()
     }
 
     init (){
-        this.saveHistory (window.app.boxNumber)
+        this.saveHistory ()
         this.showPreviouslyOpenedBoxes ()
     }
 
     saveHistory (){
-        let localValue = localStorage.getItem ("openedBoxes")
-        if (localValue!==null){
-            this.openedBoxes= localValue.split(',')
-        }
-        this.openedBoxes.push(window.app.boxNumber)
-        localStorage.setItem("openedBoxes",this.openedBoxes)
+        this.boxes.forEach (box =>{
+            box.addEventListener ('click', ()=>{
+                const boxNumber=box.textContent
+                if(boxNumber<= this.dateNumber){
+                    let localValue = localStorage.getItem ("openedBoxes")
+                    if (localValue!==null){
+                        this.openedBoxes= localValue.split(',')
+                    }
+                this.openedBoxes.push(boxNumber)
+                localStorage.setItem("openedBoxes",this.openedBoxes)
+                }
+            })
+        })
     }
 
     showPreviouslyOpenedBoxes (){

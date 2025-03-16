@@ -1,7 +1,6 @@
-import { Animation } from './modules/Animation.js'
+import { History } from "./modules/History.js"
+import { Animation } from "./modules/Animation.js"
 
-window.app={
-    boxNumber:""
-}
 
+new History
 new Animation
