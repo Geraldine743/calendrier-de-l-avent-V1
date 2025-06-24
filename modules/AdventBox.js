@@ -16,9 +16,9 @@ export class AdventBox {
 
     init (){
         console.log(this.element)
-        /*this.element.addEventListner('click', () => {
-            console.log(this.element)
-        })*/      
+        this.element.addEventListener('click', () => {
+            this.hasBeenOpened()
+        })    
     }
 
 
